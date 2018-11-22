@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>160_600</title>
+    <meta name="ad.size" content="width=160, height=600" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+    
+    <!--<script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="greensock.js"></script>
+    <script type="text/javascript" src="animation.js"></script>
+</head>
+
+<body>
+    <div id="banner">
+        
+        <div id="FrameOne">         
+           <img id="FrameOneImage" src="assets/DMPU_frame1.jpg" alt="">
+        </div>
+        
+        <div id="copyFrameOne">   
+         <img id="copyFrameOnea" src="assets/copy.png" alt="">
+        </div>
+        
+        <div id="FrameTwo">         
+           <img id="FrameTwoImage" src="assets/DMPU_frame2.jpg" alt="">
+        </div>
+        
+        <div id="copyFrameTwo">   
+             <img id="copyFrameTwoa" src="assets/copy.png" alt="">
+        </div>
+        
+        <div id="FrameThree">         
+           <img id="FrameThreeImage" src="assets/DMPU_frame3.jpg" alt="">
+        </div>
+        
+        <div id="copyFrameThree">   
+             <img id="copyFrameThreea" src="assets/copy.png" alt="">
+        </div>
+        
+        <div id="FrameFour">   
+            <!--<div id="FrameFourImage">   </div> -->
+           <img id="FrameFourImage" src="assets/DMPU_frame4.jpg" alt="">
+        </div>
+        
+        <div id="copyFrameFour">   
+            <img id="copyFrameFoura" src="assets/copy.png" alt="">
+        </div>
+        
+        <img id="worldLogo" src="assets/logo1.png" alt="">
+        <img id="worldLogoTwo" src="assets/logo2.png" alt="">
+        <img id="ctaImage" src="assets/copy.png" alt="">
+        <img id="ctaImageRoll" src="assets/copy.png" alt="">
+        <!--<div id="cta" class="copy">Sponsor a child today</div>-->
+        <div id="bgexit"></div>
+    </div>
+
+    <script>
+        if (clickTag === undefined) {
+            var clickTag = "https://www.worldvision.org.uk/ways-give/give-regularly/lost-childhood/";
+        }else{ 
+            
+        }
+        var clickArea = document.getElementById("bgexit");
+        clickArea.addEventListener("click", clickBtn, false);
+        clickArea.addEventListener("mouseover", mouseoverBtn, false);
+        clickArea.addEventListener("mouseleave", mouseleaveBtn, false);
+        var ctaImage = document.getElementById("ctaImage");
+        var ctaImageRoll = document.getElementById("ctaImageRoll");
+
+        function clickBtn() {
+            window.open(window.clickTag);  ////enable clickTag before sending masters to media agency
+           // Enabler.exit('Background Exit');  ///temp studio code for preview purposed only
+        }
+        
+        function mouseoverBtn() {
+            ctaImageRoll.style.opacity = "1";
+            ctaImage.style.visibility = "hidden";
+            //ctaImage.style.opacity = "0";           
+            //cta.style.backgroundColor = "#e0511b";
+            //cta.style.color = "#fff";
+        }
+
+        function mouseleaveBtn() {
+            ctaImageRoll.style.opacity = "0";
+             ctaImage.style.visibility = "visible";
+            //ctaImage.style.opacity = "1";
+            //cta.style.backgroundColor = "#fff";
+            //cta.style.color = "#eb6104";
+        }
+    </script>
+
+</body>
+</html>
